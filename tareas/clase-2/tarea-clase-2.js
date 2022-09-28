@@ -19,6 +19,81 @@
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
 
 function sumar(numero1, numero2) {
+  return numero1 + numero2;
+}
+function restar(numero1, numero2) {
+  return numero1 - numero2;
+}
+function multiplicar(numero1, numero2) {
+  return numero1 * numero2;
+}
+function dividir(numero1, numero2) {
+  return numero1 / numero2;
+}
+
+function consultarOperador() {
+  const operador = prompt(`Por favor ingrese el operador que desee (+,*,*,/)
+    para hacer una operacion matematica`);
+  return operador;
+}
+
+function consultarUnNumero() {
+  const numeroIngresado = Number(prompt("Por favor ingrese un numero"));
+  return numeroIngresado;
+}
+
+function pedirDatos() {
+  const numeroUsuario1 = consultarUnNumero();
+  const numeroUsuario2 = consultarUnNumero();
+  const operadorUsuario = consultarOperador();
+  return [numeroUsuario1, numeroUsuario2, operadorUsuario];
+}
+
+//let datosIngresados = pedirDatos();
+
+function realizarOperacion(arrayDatosUsuario) {
+  const numeroUsuario1 = arrayDatosUsuario[0];
+  const numeroUsuario2 = arrayDatosUsuario[1];
+  const operadorUsuario = arrayDatosUsuario[2];
+  let resultado;
+
+  if (operadorUsuario === "+") {
+    resultado = sumar(numeroUsuario1, numeroUsuario2);
+  } else if (operadorUsuario === "-") {
+    resultado = restar(numeroUsuario1, numeroUsuario2);
+  } else if (operadorUsuario === "*") {
+    resultado = multiplicar(numeroUsuario1, numeroUsuario2);
+  } else if (operadorUsuario === "/") {
+    resultado = dividir(numeroUsuario1, numeroUsuario2);
+  } else {
+    resultado = `dificil de calcular, no conozco el operador ${operadorUsuario}`;
+  }
+  return resultado;
+}
+
+function mostrarResultado(arrayDatosUsuario) {
+  alert(`El resultado de ${arrayDatosUsuario[0]} ${
+    arrayDatosUsuario[2]} ${arrayDatosUsuario[1]} es ${realizarOperacion(arrayDatosUsuario)}`);
+}
+
+
+
+function ejecutarTareaClase2(){
+  const datosIngresados = pedirDatos();
+  mostrarResultado(datosIngresados);
+}
+
+ejecutarTareaClase2();
+
+/*
+let resultadoOperacion = realizarOperacion(datosIngresados);
+console.log(resultadoOperacion);
+*/
+
+/*
+    >>>> OTRA POSIBLE MANERA TAL CUAL APARECIA EN EL GIT 
+
+function sumar(numero1, numero2) {
     return numero1 + numero2;
 }
 
@@ -37,8 +112,13 @@ if (operador === '+') {
     resultado = restar(numero1, numero2);
 }
 
+*/
+
 //https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
+
+/*
 console.log(
     `El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`
 );
 
+*/

@@ -16,6 +16,8 @@ Outline general del curso https://docs.google.com/document/d/1D-7fi5afo_kgDFLi_n
 
 ### Cómo usar este repositorio.
 
+Iván está leyendo este readme
+
 Si estás familiarizado con Git, podés clonar este repositorio en tu pc.
 
 Si no sabés lo que es Git, relajate:
