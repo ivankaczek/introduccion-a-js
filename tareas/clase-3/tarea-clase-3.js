@@ -80,14 +80,14 @@ function evaluarNombre(nombreIngresado){
 }
 
 function tarea1(){
-    const NOMBRE_USUARIO = preguntarNombre();
-    evaluarNombre(NOMBRE_USUARIO);
+    const nombreUsuario = preguntarNombre();
+    evaluarNombre(nombreUsuario);
 }
 
 
 function preguntarEdad(){
-    const EDAD = Number(prompt('Cual es tu edad?','37') || "");
-    return EDAD;
+    const edad = Number(prompt('Cual es tu edad?','37'));
+    return edad;
 }
 
 function compararEdad(edadIngresada){
@@ -105,8 +105,8 @@ function compararEdad(edadIngresada){
 }
 
 function tarea2(){
-    const EDAD_USUARIO = preguntarEdad();
-    compararEdad(EDAD_USUARIO);
+    const edadUsuario = preguntarEdad();
+    compararEdad(edadUsuario);
 }
 
 function preguntarSiTieneDNI(){
@@ -124,9 +124,9 @@ function preguntarSiTieneDNI(){
 }
 
 function evaluarEntradaBar(){
-    const TIENE_DNI = preguntarSiTieneDNI();
+    const tieneDni = preguntarSiTieneDNI();
     const EDAD_MINIMA = 18;
-    if (TIENE_DNI === "si"){
+    if (tieneDni === "si"){
         const EDAD_PERSONA = preguntarEdad();
         if(EDAD_MINIMA <= EDAD_PERSONA){
             alert(`Bienvenido al bar!`);
