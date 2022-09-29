@@ -122,8 +122,8 @@ console.log("mi nombre es " + mi_nombre);
 // Crear 2 variables nuevas, una con tu nombre, la segunda con tu edad. Dales un nombre apropriado y
 // mostralas con un alert.
 
-let mi_nombre = 'Ivan';
-let mi_edad = 37;
+let miNombre = 'Ivan';
+let miEdad = 37;
 //alert("mi nombre es " + mi_nombre + " y tengo " + mi_edad + "  años");
 
 // Consejo: para mostrar 2 variables de texto al mismo tiempo, las podés unir usando el signo '+'. Ejemplo:
@@ -159,7 +159,7 @@ let mi_edad = 37;
 */
 
 // TAREA: Crear una constante y mostrarla con un alert
- const dni_ivan = 31037338;
+ const dniIvan = 31037338;
 
 // alert(dni_ivan);
 
@@ -194,9 +194,9 @@ let mi_edad = 37;
 // * 3ra variable llamada resultadoMultiplicacion que va a ser igual a
 // la 1ra variable multiplicada (con el operador *) por la 2nda variable.
 // Mostrar el valor de resultadoMultiplicacion con un alert o un console.log
-let  num01 = 10;
-let num02 = 3;
-let result = num01*num02;
+let  numero1 = 10;
+let numero2 = 3;
+let resultado = numero1*numero2;
 //alert(result);
 
 /*
@@ -250,8 +250,8 @@ let result = num01*num02;
 // TAREA: Es tu turno de crear una función!
 
 // Creá una función llamada 'sumar'
-function sumar(num1,num2){
-    return num1+num2;
+function sumar(numero1,numero2){
+    return numero1+numero2;
 }
 // Escribí código para que acepte 2 argumentos (numero1 y numero2)
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
@@ -261,8 +261,8 @@ function sumar(num1,num2){
 
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
-function restar(num1,num2){
-    return num1-num2;
+function restar(numero1,numero2){
+    return numero1-numero2;
 }
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
 //console.log(restar(5,1));
@@ -324,6 +324,8 @@ function restar(num1,num2){
 
     También están los operadores '==' y '!=' que son muy similares a '===' y '!==' con una pequeña variación,
     que los hacen que sean más propensos a errores, así que siempre que sea posible vamos a usar '===' y '!=='.
+
+    Nota>>> (1 == "1") va a devolver 'true' porque compara valor sin importar el tipo
 
     El resultado de un operador de comparación es un valor Booleano (true o false, verdadero o falso)
 
@@ -399,8 +401,8 @@ function dividir(dividendo,divisor){
     return dividendo/divisor;
 }
 
-function multiplicar(num1,num2){
-    return num1*num2;
+function multiplicar(numero1,numero2){
+    return numero1*numero2;
 }
 
 // TAREA: Reescribamos el if-else que teníamos y extendámolos, agregando:
