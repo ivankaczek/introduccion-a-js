@@ -42,48 +42,61 @@ function consultarUnNumero() {
   return numeroIngresado;
 }
 
-function pedirDatos() {
-  const numeroUsuario1 = consultarUnNumero();
-  const numeroUsuario2 = consultarUnNumero();
-  const operadorUsuario = consultarOperador();
-  return [numeroUsuario1, numeroUsuario2, operadorUsuario];
-}
+const numeroUsuario1 = consultarUnNumero();
+const numeroUsuario2 = consultarUnNumero();
+const operadorUsuario = consultarOperador();
 
-//let datosIngresados = pedirDatos();
-
-function realizarOperacion(arrayDatosUsuario) {
-  const numeroUsuario1 = arrayDatosUsuario[0];
-  const numeroUsuario2 = arrayDatosUsuario[1];
-  const operadorUsuario = arrayDatosUsuario[2];
+function realizarOperacion(numero1,numero2,operador) {
   let resultado;
-
-  if (operadorUsuario === "+") {
-    resultado = sumar(numeroUsuario1, numeroUsuario2);
-  } else if (operadorUsuario === "-") {
-    resultado = restar(numeroUsuario1, numeroUsuario2);
-  } else if (operadorUsuario === "*") {
-    resultado = multiplicar(numeroUsuario1, numeroUsuario2);
-  } else if (operadorUsuario === "/") {
-    resultado = dividir(numeroUsuario1, numeroUsuario2);
+  if (operador === "+") {
+    resultado = `El resultado de ${numero1} ${operador} ${numero2
+    } es ${sumar(numero1,numero2)}`;
+  } else if (operador === "-") {
+    resultado = `El resultado de ${numero1}  ${operador} ${numero2
+    } es ${restar(numero1, numero2)}`;
+  } else if (operador === "*") {
+    resultado = `El resultado de ${numero1} ${operador} ${numero2
+    } es ${multiplicar(numero1, numero2)}`;
+  } else if (operador === "/") {
+    resultado = `El resultado de ${numero1} ${operador} ${numero2
+    } es ${dividir(numero1,numero2)}`;
   } else {
-    resultado = `dificil de calcular, no conozco el operador ${operadorUsuario}`;
+    resultado = `dificil de calcular, no conozco el operador ${operador}`;
   }
-  return resultado;
+  console.log(resultado);
 }
 
-function mostrarResultado(arrayDatosUsuario) {
-  alert(`El resultado de ${arrayDatosUsuario[0]} ${
-    arrayDatosUsuario[2]} ${arrayDatosUsuario[1]} es ${realizarOperacion(arrayDatosUsuario)}`);
-}
+realizarOperacion(numeroUsuario1,numeroUsuario2,operadorUsuario);
+
+/*
+
+CORRECCIONES DEL PROFE EN LA CLASE 2
+no vimos arrays para esta clase, la estructura adecuada de pedirDatos 
+debería ser un objeto
 
 
 
-function ejecutarTareaClase2(){
-  const datosIngresados = pedirDatos();
-  mostrarResultado(datosIngresados);
-}
+Fabricio Sodano
+  hace 13 horas
+lo de arrayDatosUsuario está mal, primero porque el nombre no tiene sentido, 
+ponele "array" no tiene sentido, el plural ya te dice que es un array, y ponele "datos" 
+es lo mismo que ponerle "coso", no te da ninguna información adicional.
+Lo mejor es que tu función tome los 3 parámetros que necesita y ya
+realizarOperacion(operador, numero1, numero2)
 
-ejecutarTareaClase2();
+
+Fabricio Sodano
+  hace 13 horas
+la función pedirDatos la podés eliminar completamente
+
+
+Fabricio Sodano
+  hace 13 horas
+yo te diría que la función realizar Operacion te devuelve ya el texto completo 
+(para no devolverte a veces texto y a veces un número) y después hacés el console.log de eso (editado) 
+*/
+
+
 
 /*
 let resultadoOperacion = realizarOperacion(datosIngresados);
