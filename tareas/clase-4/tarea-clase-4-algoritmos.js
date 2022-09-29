@@ -193,19 +193,21 @@ Fibonacci usando recursión   */
   console.log(`${fibonacciRecursion(entero)}`);
 }
 
-function algoritmo16(){
-  function verificarNumeroPrimo(entero){
-    let esPrimo = true;
-   
-      for(let i = 2; i <= (entero/2); i++) {
-        if (entero%i === 0){
-          esPrimo = false;
-          return false;
-        }
+function verificarNumeroPrimo(entero){
+  let esPrimo = true;
+ 
+    for(let i = 2; i <= (entero/2); i++) {
+      if (entero%i === 0){
+        esPrimo = false;
+        return false;
       }
-    
-    return esPrimo;
-  }
+    }
+  
+  return esPrimo;
+}
+
+function algoritmo16(){
+  
 
   const entero = 18;
    console.log(`${entero} es primo: ${verificarNumeroPrimo(entero)}`);
@@ -264,7 +266,50 @@ Ejemplo:
     console.log(`utilizando funcion con módulo la suma es: ${sumarDigitosUsandoModulo(numeroPrueba)}`);
 }
 
-algoritmo17();
+function algoritmo18(){
+  /*Desafío de programación #18: Imprimir los primeros 100 números primos */
+  let contador = 1;
+  const DETENERSE = 100;
+  let numeroEntero = 1;
+  while(contador<=DETENERSE) {
+    let esPrimo = verificarNumeroPrimo(numeroEntero);
+    if(esPrimo){
+      console.log(`Numero primo #${contador}: ${numeroEntero}`);
+      contador++;
+    }
+    numeroEntero++;
+
+  }
+}
+
+function algoritmo19(){
+  /* Desafío #19: Crear una función que retorne un array con los primeros números "n-primos" 
+  mayores que un número particular definido "alComienzo"
+  Ejemplo: Quiero los primeros 4 números primos mayores que 5, el resultado debería ser: [7,11,13,17,19]*/
+  function primerosNumerosPrimosMayoresA(cantidad, inicio){
+    const alComienzo = inicio;
+    let contador = 0;
+    let entero = alComienzo + 1;
+    let numeros = [];
+    while(contador < cantidad){
+      let esPrimo = verificarNumeroPrimo(entero);
+      if (esPrimo){
+        numeros.push(entero);
+        contador++;
+      }
+    entero++;
+    } 
+    return numeros;
+  }
+
+  const cantidadEnteros = 7;
+  const mayoresA = 20;
+  console.log(`Los primeros ${cantidadEnteros} primos mayores a ${mayoresA} son ${
+    primerosNumerosPrimosMayoresA(cantidadEnteros,mayoresA)}`);
+}
+
+
+algoritmo19();
 
 
 /*
@@ -428,3 +473,5 @@ Desafío de programación #51. Find the frequency of characters inside a string.
 Desafío de programación #52. Calculate Fibonacci(500) with high precision (all decimals)
 Desafío de programación #53. Calculate 70! with high precision (all decimals)
  */
+
+
