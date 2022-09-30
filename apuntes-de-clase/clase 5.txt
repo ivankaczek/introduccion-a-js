@@ -1,0 +1,129 @@
+Gracias a los mentores
+Gracias a los traductores: https://github.com/r-argentina-programa/traducciones -- Los 2 primeros artículos son relevantes a la clase de hoy.
+Corregir tarea clase 4
+Resultados de los algoritmos en: https://github.com/CodeGuppyPrograms/CodingChallenges
+Comentarios acerca de escribir código complejo, efecto dunning kruger.
+
+
+Otros conceptos que fueron surgiendo en la semana
+
+Parámetros por default en las funciones. Son también parámetros opcionales.
+--------------------------------------------------------------------------
+
+Sintaxis normal 
+	function evaluarEdad(edad){
+		/code here/
+	}
+
+	evaluarEdad(17);
+
+Con parámetro por default
+-------------------------
+	function evaluarEdad(edad = 18){
+		/code here/
+	}
+
+	evaluarEdad(); 		// al no poner nada va evaluar la edad por defecto
+
+o bien
+	evaluarEdad(12);	// sobreescribe el parámetro por defecto
+
+
+
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Funciones/Parametros_por_defecto
+
+
+Operador ternario ? :
+---------------------
+
+
+Permite escribir una if-else de manera sencilla, es como un if-else en una sola línea
+
+sintaxis original 			if (edad>= 18) {
+						/hace esto/
+					} else {
+						/hace esto otro/
+					}
+
+Operador ternario		edad >= 18?  /hacer esto/ : /hacer esto otro/ ;
+
+Resumen 	condicion ? expresion1 : expresion 2;	
+
+
+
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Conditional_Operator
+
+
+++variable ó variable++
+-----------------------
+
+let x = 0;
+
+let y = ++x;
+
+
+expresiones de función
+----------------------
+
+en el archivo nivel3.js está el ejemplo al principio de todo
+
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Funciones#Expresiones_de_funci%C3%B3n
+
+
+
+funciones anónimas
+------------------
+Git y GitHub
+Qué vamos a ver?
+Por qué se necesita un control de versiones.
+Breve historia y arquitecturas de control de versiones.
+https://www.quora.com/What-are-the-pros-and-cons-of-using-branches-in-Git-vs-SVN
+
+CVS
+Concurrent Versions System
+SVN
+Subversion
+
+Introducción a git.
+Git es un mecanismo de control de versiones, creado por Linus Torvald, el creador de linux. Obviamente es open-source:
+https://github.com/git/git
+Usar GitHub Desktop. https://desktop.github.com/
+Escribir un buen mensaje de commit es fundamental.
+Explicar por qué y no cómo.
+Imperativo (Arregla… modifica... ).
+Otras reglas acá: http://tomasdelvechio.github.io/old/440/
+Algunos comandos equivalentes en la consola
+clone
+checkout
+pull
+	pull request 1h26m
+	un pull request es una colección de commits, que tira todos los cambios y los lleva al remoto
+push
+commit
+
+branch: Arranca en 1h 15m 
+	usar kebab-case
+
+
+
+Nivel 3.js
+------------
+	
+
+
+
+Vista básica de HTML
+Vista básica de CSS
+Formularios
+Manejadores de evento
+Primeras 2 tareas
+Próxima clase:
+Corrección de tarea
+Manejo de formularios avanzado
+Elementos: select, list, textarea, radio, checkbox, etc.
+Atributos: readonly, disabled, etc.
+Creación dinámica de formularios (ejercicio: nombres y apellidos de todos los miembros de tu familia y/o amistades)
+Introducción a accesibilidad (label, legend, aria, etc.)
