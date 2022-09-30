@@ -1,5 +1,12 @@
 // Nivel 3
 
+function evaluarEdad(edad){
+    edad >= 18 ? console.log('Bienvenido al bar!') : console.log('no tenés edad para entrar');
+    
+}
+
+evaluarEdad(17);
+
 /*
     Introducción
     ============
