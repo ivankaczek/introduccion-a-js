@@ -1,0 +1,16 @@
+body {
+    background: #d9e1d5;
+}
+
+h3 {
+    font-size: 30px;
+    color: #30322f;
+}
+
+#horas {
+    color: #30322f;
+}
+
+.oculto {
+    display: none;
+}

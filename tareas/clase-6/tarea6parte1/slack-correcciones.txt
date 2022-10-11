@@ -1,0 +1,93 @@
+/*
+TAREA: Empezar preguntando cuánta gente hay en el grupo familiar.
+Crear tantos inputs+labels como gente haya para completar la edad de cada integrante.
+Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad, la menor edad 
+y el promedio del grupo familiar.
+
+Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs 
+ya creados (investigar cómo en MDN).
+*/
+
+// variables con las que voy a trabajar
+
+Gerardo Rossler
+  hace 7 días
+El problema con el prompt que usas, es que yo como usuario, puedo poner texto y no numero y se rompe todo.
+Por ejemplo, un usuario podria poner "dos" en vez de 2.
+Cambialo a un input
+
+Gerardo Rossler
+  hace 7 días
+<div id="mostrar-inputs">
+Mejora el nombre del id, acordate que vos tenes que hacer tu codigo pensando que otra persona lo va a ver
+
+
+Gerardo Rossler
+  hace 7 días
+eso puede ser grupo-inputs o container-inputs
+
+
+Gerardo Rossler
+  hace 7 días
+Lo mismo con este#mostrar-resultados
+
+
+Gerardo Rossler
+  hace 7 días
+No necesitas hacer una funcion para seleccionar un elemento
+function traerTitulo(){
+    return document.querySelector('#titulo');
+}
+
+
+Gerardo Rossler
+  hace 7 días
+$tituloPrincipal.textContent = 'calculos con las edades de las personas';
+Eso ya lo podes poner en el html, no necesitas usar js para ponerlo
+
+
+Gerardo Rossler
+  hace 7 días
+for(let i=0; i < cantidadIntegrantes; i++){
+    let $casilleroParaRellenar = agregarLabelInput();
+    $elementoParaMostrarInputs.appendChild($casilleroParaRellenar);
+}
+Pone esto dentro de una funcion
+
+
+Gerardo Rossler
+  hace 7 días
+$botonCalcular.onclick = function() {
+    const inputs = document.querySelectorAll('.datos');
+    console.log(inputs);
+    for(let i= 0; i<inputs.length; i++){
+        const valorParaAgregar = Number(inputs[i].value);
+        edades.push(valorParaAgregar);
+    }
+    console.log(edades);
+    $textoMenorEdad = document.createTextNode(`${devolverMinimo(edades)}`);
+    $elementoMenorEdad.appendChild($textoMenorEdad);
+
+    $textoMayorEdad = document.createTextNode(`${devolverMaximo(edades)}`);
+    $elementoMayorEdad.appendChild($textoMayorEdad);
+
+    $textoPromedioEdad = document.createTextNode(`${promedio(edades)}`);
+    $elementoPromedioEdad.appendChild($textoPromedioEdad);
+
+    $elementoParaMostrarResultados.className = "";
+    
+    return false;
+}
+Aca hay varias cosas mal:
+Primero, que el onclick llame a una funcion y que despues esa funcion llame a las demas funciones.
+Cada funcion tiene que hace 1 sola cosa, que una busque las edades, otra calcule, otra ponga el resultado y asi
+
+
+
+
+
+
+
+
+
+
