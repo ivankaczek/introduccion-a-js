@@ -8,20 +8,22 @@
 // <strong> pre-creado el tiempo total de los videos.
 */
 
-// Primero declaro los elementos html con los que voy a trabajar
+
 $campoHoras = document.querySelector('#horas');
 $campoMinutos = document.querySelector('#minutos');
 $campoSegundos = document.querySelector('#segundos');
 $botonAgregar = document.querySelector('#agregar');
 $botonCalcular = document.querySelector('#calcular');
 $campoMostrarRespuesta = document.querySelector('.resultado');
+$cantidadClases = document.querySelector('#cuantas');
 
-// declaro variables para contabilizar horas, minutos, segundos
+
 let horasAcumuladas = 0;
 let minutosAcumulados = 0;
 let segundosAcumulados = 0;
 let minutosCorregidos = 0;
 let segundosCorregidos = 0;
+let cantidadClases = 0;
 
 
 
@@ -29,8 +31,8 @@ $botonAgregar.onclick = function(){
     horasAcumuladas += Number($campoHoras.value);
     minutosAcumulados += Number($campoMinutos.value);
     segundosAcumulados += Number($campoSegundos.value);
-    //alert(`Agregaste correctamente ${$campoHoras.value} horas ${
-    //    $campoMinutos.value} minutos ${$campoSegundos.value} segundos`);
+    cantidadClases++;
+    $cantidadClases.textContent = cantidadClases;
     return false;
 
 }
