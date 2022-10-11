@@ -11,19 +11,37 @@
 
 <body>
     <header>
-        <h1 id="titulo"></h1>
+        <h1 id="titulo">Cálculos estadísticos del grupo familiar</h1>
     </header>
     <main>
-        <div id="mostrar-inputs">
-        
+
+        <div id="pregunta-cantidad-personas" >
+            <form>
+                <label>Ingrese cantidad personas en su grupo familiar:</label>
+                <input id="cantidad-personas" type="number"/>
+                <button type="submit" id="agregar">agregar</button>
+
+            </form>
+            
+        </div>
+        <div>
+            <p></p>
+        </div>
+        <div id="grupo-inputs" class="oculto">
+            
+
+            
         </div>  
         <div>
-            <button type="submit" id="calcular">calcular</button>
+            <button type="button" id="calcular" class="oculto">calcular</button>
         </div>
-        <div class="oculto" id="mostrar-resultados">
-            <p id="menor-edad"> La menor edad es: </p>
-            <p id="mayor-edad"> La mayor edad es:  </p>
-            <p id="promedio-edad"> El promedio de edad es: </p>
+        <div class="oculto" id="grupo-resultados">
+            <p> La menor edad es: <em id="menor-edad"></em></p>
+            <p> La mayor edad es: <em id="mayor-edad"></em>  </p>
+            <p> El promedio de edad es: <em id="promedio-edad"></em> </p>
+        </div>
+        <div>
+            <button type="button" class="oculto" id="recomenzar">recomenzar</button>
         </div>
 
     </main>

@@ -1,43 +1,18 @@
-function preguntarCantidadPersonas(){
-    const pregunta = 'Cuánta gente hay en el grupo familiar?';
-    const cantidad = Number(prompt(pregunta));
-    return cantidad;
-}
-/*
-function traerElementoConEsteId(id){
-    const parametro = `'#${id}'`
-    return document.querySelector(parametro);
-}
-*/
 
-function traerTitulo(){
-    return document.querySelector('#titulo');
+
+function validarCantidadPersonas(cantidad){
+    if (cantidad < 0) {
+      return 'la cantidad de personas debe ser un número entero positivo';
+    } else if (cantidad > 100) {
+      return 'es muy raro que haya más de 100 personas en tu grupo familiar';
+    } else if(cantidad - Math.trunc(cantidad) !== 0) {
+      return 'la cantidad debe ser un número entero';
+    }
+    return "";
 }
 
-function crearLabel(){
-    const $label = document.createElement('label');
-    const textoLabel = 'Ingrese la edad de la persona: ';
-    $label.textContent = textoLabel;
-    return $label;
-}
 
-function crearInput(){
-    const $input = document.createElement('input');
-    $input.placeholder = "edad";
-    $input.className = "datos";
-    return $input;
-}
-
-function agregarLabelInput(){
-    const $elementoDiv = document.createElement('div');
-    const $labelParaAgregar = crearLabel();
-    const $inputParaAgregar = crearInput();
-    $elementoDiv.appendChild($labelParaAgregar);
-    $elementoDiv.appendChild($inputParaAgregar);
-    return $elementoDiv;
-}
-
-function promedio(numeros){
+function devolverPromedio(numeros){
     let acumulado = 0;
     for(let i = 0; i<numeros.length ; i++){
       acumulado += numeros[i];
